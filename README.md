@@ -49,6 +49,25 @@ npm install -g near-cli
 
 export CONTRACT_ID=kamaleth.testnet
 
-export COUNCIL='["0xkamal7.testnet", "kamaleth.testnet"]'
+export COUNCIL='["kamaleth.testnet"]'
 
-export ARGS=`echo '{"config": {"name": "MediaShield Dao", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata":"MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement. Our DAO empowers content creators and users alike, providing a secure and transparent platform for sharing, monetizing, and enjoying digital media."}, "policy": '$COUNCIL'}' | base64`
+export ARGS=`(echo '{"config": {"name": "Mediashield", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata": "MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement"}, "policy": '$COUNCIL'}' | base64)`
+
+export ARGS=`echo '{"config": {"name": "Mediashield", "purpose": "Genesis DAO", "metadata":""}, "policy": '$COUNCIL'}' | base64`
+
+near call $CONTRACT_ID create "{\"name\": \"Metashield\", \"args\": \"$ARGS\"}" --accountId $CONTRACT_ID --amount 10 --gas 150000000000000
+
+export ARGS=`echo '{"config": {"name": "MediaShield", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata":"MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement"}, "policy": '$COUNCIL'}' | base64`
+
+export ARGS=`echo '{"config": {"name": "<name>", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata":""}, "policy": '$COUNCIL'}' | base64`
+
+export ARGS=`echo '{ "config": { "name": "MediaShield", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata": "MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement"}, "policy": ["0xkamal7.testnet", "kamaleth.testnet"] }' | base64
+
+export ARGS=$(echo '{"config": {"name": "MediaShield", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata": "MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement"}, "policy": ["0xkamal7.testnet", "kamaleth.testnet"]}' | base64)
+
+near call $CONTRACT_ID create "{\"name\": \"MediaShield\", \"args\": \"$ARGS\"}" --accountId $CONTRACT_ID --amount 5 --gas 150000000000000
+
+export ARGS=`echo '{"config": {"name": "mediashield", "purpose": "Mediashield DAO", "metadata":""}, "policy": '$COUNCIL'}' | base64`
+near call $CONTRACT_ID create "{\"name\": \"mediashield\", \"args\": \"$ARGS\"}" --accountId $CONTRACT_ID --amount 10 --gas 150000000000000
+
+near call $CONTRACT_ID create "{\"name\": \"mediashield\", \"args\": \"$ARGS\"}" --accountId $CONTRACT_ID --amount 10 --gas 150000000000000
