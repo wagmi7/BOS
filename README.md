@@ -21,7 +21,7 @@ MediaShield DAO leverages the capabilities of the BOS (Blockchain Operating Syst
 
 - **Decentralized Storage**: BOS allows us to securely store digital media assets while preserving user privacy through encryption and decentralized storage solutions.
 
-- **Smart Contracts**: With BOS, we can create smart contracts on the Aurora blockchain to tokenize digital assets, establish ownership, and automate royalty payments, ensuring fair compensation for content creators.
+- **Smart Contracts**: With BOS, we created smart contract on the Aurora blockchain to tokenize digital assets, establish ownership, and automate royalty payments, ensuring fair compensation for content creators.
 
 - **NFT Standards**: BOS supports NFT (Non-Fungible Token) standards like ERC-721 and ERC-1155, enabling us to tokenize and protect digital media assets, establish provenance, and facilitate licensing and monetization.
 
