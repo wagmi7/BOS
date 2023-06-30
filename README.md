@@ -31,6 +31,10 @@ MediaShield DAO leverages the capabilities of the BOS (Blockchain Operating Syst
 
 MediaShield DAO is live and deployed on the Aurora blockchain, leveraging its fast and low-cost transactions. Here are the deployed contracts:
 
+Deployed Factory Contract- https://explorer.testnet.near.org/transactions/5zpUGebymD8hm96DFMApRNH5Zh3BCSkrJfhL6xnQvxu3
+
+Initiated - https://explorer.testnet.near.org/transactions/6iKVQTnM4zYnZFDMPGQiatqeAmHuzGEUMe25cioDjUxM
+
 - DAO Contract: [DAO Contract Address](https://explorer.aurora.dev/address/dao-contract-address)
 - NFT Marketplace: [NFT Marketplace Address](https://explorer.aurora.dev/address/nft-marketplace-address)
 - Royalty Payment Contract: [Royalty Payment Contract Address](https://explorer.aurora.dev/address/royalty-payment-contract-address)
@@ -40,3 +44,11 @@ Join us on this exciting journey as we revolutionize the digital media and enter
 For more information, visit our [website](https://mediashielddao.com) and explore our [documentation](https://mediashielddao.com/docs).
 
 Feel free to contribute and engage with the community. Together, let's build the future of digital media! 🌐🔥
+
+npm install -g near-cli
+
+export CONTRACT_ID=kamaleth.testnet
+
+export COUNCIL='["0xkamal7.testnet", "kamaleth.testnet"]'
+
+export ARGS=`echo '{"config": {"name": "MediaShield Dao", "purpose": "To create a decentralized ecosystem that promotes fair and sustainable practices in the digital media and entertainment industry", "metadata":"MediaShield DAO is a revolutionary digital media and entertainment solution that addresses the challenges faced by the industry, including data privacy, intellectual property protection, royalty payments, and copyright infringement. Our DAO empowers content creators and users alike, providing a secure and transparent platform for sharing, monetizing, and enjoying digital media."}, "policy": '$COUNCIL'}' | base64`
